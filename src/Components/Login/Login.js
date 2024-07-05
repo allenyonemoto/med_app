@@ -9,7 +9,7 @@ const Login = () => {
     if (sessionStorage.getItem("auth-token")) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   const login = async (e) => {
     e.preventDefault();
     const res = await fetch(`${API_URL}/api/auth/login`, {

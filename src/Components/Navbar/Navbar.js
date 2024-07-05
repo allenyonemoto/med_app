@@ -7,7 +7,7 @@ const Navbar = () => {
   const [click, setClick] = useState(false); 
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const [username, setUsername] = useState(""); 
-  const [email, setEmail] = useState(""); 
+  const [setEmail] = useState(""); 
   const [showDropdown, setShowDropdown] = useState(false); 
 
 
@@ -44,7 +44,7 @@ const Navbar = () => {
       setUsername(storedEmail);
       console.log("Navbar UserName: ", username)
     }
-  }, []); 
+  }, [isLoggedIn, username]); 
 
   useEffect(() => {
     const storedUsername = sessionStorage.getItem("name");
@@ -54,7 +54,7 @@ const Navbar = () => {
         setUsername(storedUsername);
     }
     console.log("Navbar UserName2: ", username)
-}, []);
+}, [username]);
 
   return (
     <nav>
