@@ -8,12 +8,14 @@ import Login from './Components/Login/Login';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import FindDoctorSearch from './Components/BookingConsultation/FindDoctorSearch/FindDoctorSearch';
 import BookingConsultation from './Components/BookingConsultation/BookingConsultation';
+import Notification from './Components/Notification/Notification';
 
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
         <Navbar/>
+        <Notification>
         <Routes>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/login" element={<Login />} /> 
@@ -22,6 +24,7 @@ function App() {
             <Route path="/booking-consultation" element={<BookingConsultation />} /> {/* Route for searching doctors */}
             <Route path='/finddoctor' element={<FindDoctorSearch />} />
         </Routes>
+        </Notification>
         </BrowserRouter>
     </div>
   );
