@@ -91,10 +91,12 @@ const Sign_Up = () => {
                                 <label htmlFor="password">Password</label>
                                 <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
                             </div>
+                            <div className="form-group">
                             <div className="btn-group">
                                 <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
                             </div>
-                            </form>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
+import './Login.css';
+
 const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState('');
@@ -81,10 +83,12 @@ const Login = () => {
                         placeholder="Enter your password"
                         aria-describedby="helpId"/>
                 </div>
-              <div className="btn-group">
-                <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
-                  Login
-                </button>
+                <div className="form-group">
+                    <div className="btn-group">
+                        <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
+                            Login
+                        </button>
+                    </div>
               </div>
             </form>
           </div>
